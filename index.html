@@ -7,25 +7,25 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<div class="father-popap">
-	<div class="popap">
-	<div class= "popup-container">
-		<div class= "form">
-			<div class="form-row">
-				<h2 class="header-popup">ваш фитбек</h2>
-
+<div class="hidden">
+	<div class="father-popap">
+		<div class="popap">
+			<div class= "popup-container">
 				<div class="form-row">
-					<label class="select-group">
-						<span class="form-question">Как часто вы заходите на сайт?</span>
-						<select class="select">
-							<option value="everyday" selected>Почти каждый день</option>
-							<option value="once-a -eek">Раз в неделю</option>
-							<option value="seldom">Редко</option>
-						</select>
-					</label>
-				</div>
+					<h2 class="header-popup">ваш фитбек</h2>
 
-				<div class="form-row">
+					<div class="form-row">
+						<label class="select-group">
+							<span class="form-question">Как часто вы заходите на сайт?</span>
+							<select class="select">
+								<option value="everyday" selected>Почти каждый день</option>
+								<option value="once-a -eek">Раз в неделю</option>
+								<option value="seldom">Редко</option>
+							</select>
+						</label>
+					</div>
+
+					<div class="form-row">
 						<div>
 							<span class="form-question">Вы подписаны на e-mail рассылку?</span>
 						</div>
@@ -39,25 +39,23 @@
 								<span class="radio-group-text">Нет</span>
 							</label>
 						</div>
+					</div>
+
+					<div class="form-row">
+						<span class="form-question">Расскажите, какой контент вы хотели бы видеть на нашем сайтe? </span>
+						<textarea class="field textarea" placeholder="Может, больше рецептов?"></textarea>
+					</div>
+
+					<button class="send-button">отправить</button>
 				</div>
 
-				<div class="form-row">
-					<span class="form-question">Расскажите, какой контент вы хотели бы видеть на нашем сайтe? </span>
-					<textarea class="field textarea" placeholder="Может, больше рецептов?"></textarea>
-				</div>
-
-				<button class="send-button">отправить</button>
+				<button class="popup__close" type="close-button">
+					<span class="button">Закрыть окно</span>
+				</button>
 			</div>
-
-			<button class="popup__close" type="close-button">Закрыть окно</button>
 		</div>
 	</div>
 </div>
-</div>
-
-
-
-
 
 <body>
 	<header class="header">
@@ -82,9 +80,9 @@
 		</div>
 	</header>
 
-	<div class="new-trends">
-		<h2 class="header-trends">сейчас в тренде</h2>
-		<section class="trends">
+		<section class="now-in-trend">
+			<h2 class="header-trends">сейчас в тренде</h2>
+		<div class="trends">
 			<article class="trend trend1">
 				<div class="trend-box">
 					<ul class="trend-teg">
@@ -92,7 +90,9 @@
 						<li class="trend-teg-item"><a class="tag-name" href="">interior</a></li>
 					</ul>
 					<div class="trend-content">
-						<a class="trend-text" href="">сейчас в тренде: сад на подоконнике</a>
+						<h3 class="trend-name">
+							<a class="trend-text" href="">сейчас в тренде: сад на подоконнике</a>
+						</h3>
 					</div>
 				</div>
 			</article>
@@ -102,7 +102,9 @@
 						<li class="trend-teg-item"><a class="tag-name" href="">food</a></li>
 					</ul>
 					<div class="trend-content">
-						<a class="trend-text" href="">сыры на красивых картинках из интернета: какие они на вкус?</a>
+						<h3 class="trend-name">
+							<a class="trend-text" href="">сыры на красивых картинках из интернета: какие они на вкус?</a>
+						</h3>
 					</div>
 				</div>
 			</article>
@@ -113,10 +115,11 @@
 						<li class="trend-teg-item"><a class="tag-name" href="">trevel</a></li>
 					</ul>
 					<div class="trend-content">
-						<a class="trend-text" href="">собираемся в первый поход в горы</a>
+						<h3 class="trend-name">
+							<a class="trend-text" href="">собираемся в первый поход в горы</a>
+						</h3>
 					</div>
 				</div>
-			</article>
 			</article>
 			<article class="trend trend4">
 				<div class="trend-box">
@@ -125,12 +128,15 @@
 						<li class="trend-teg-item"><a class="tag-name" href="">health</a></li>
 					</ul>
 					<div class="trend-content">
-						<a class="trend-text" href="">сейчас в тренде: сколько витвимина c в лимонах?</a>
+						<h3 class="trend-name">
+							<a class="trend-text" href="">сейчас в тренде: сколько витвимина c в лимонах?</a>
+						</h3>
 					</div>
 				</div>
 			</article>
+		</div>
 		</section>
-	</div>
+		
 
 	<div class="page">
 		<div class="card">
@@ -358,7 +364,7 @@
 
 					<form class="subscription">
 						<label class="subscription-group">
-							<input class="field" placeholder="Ваш email-адрес" alt="поле для ввода почты">
+							<input class="mailing" placeholder="Ваш email-адрес" alt="поле для ввода почты">
 						</label>
 						<button class="subscription-button" alt="кнопка подписаться">подписаться</button>
 					</form>
@@ -411,101 +417,103 @@
 		</div>
 	</div>
 
-	<h2 class="header-shop">наши изделия</h2>
-
-	<section class="shop">
-		<article class="product">
-			<pictur class="product__imgbox">
-				<source
-				media="(min-width:360px)"
-				srcset="images/shop-item-mobile1.jpg"
-				media="(min-width:768px)"
-				srcset="images/shop-item-tablet1.jpg"
-				media="(min-width:1200px)"
-				srcset="images/shop-item-desk1.jpg">
-				<img class="product__img" src="images/shop-item-desk1.jpg" alt="подушка-с-принтом">
-			</picture>
-			<div class="product__body">
-				<div class="product__content">
-					<h3 class="product__title">подушки на диван</h3>
-					<p class="product__description"> Набор из двух подушек с модными принтами. Видео о создании<a href="" class="product-link"> здесь</a>.</p>
-					<div class="product__box">
-						<div class="price">
-							<span class="product__price_old">
-								<span class="product__price-value">1000</span>
-								<span class="product__rub">₽</span>
-							</span>
-							<span class="product__price">
-								<span class="product__price-value">800</span>
-								<span class="product__rub">₽</span>
-							</span>
+	<section class="our-products">
+		<h2 class="header-shop">наши изделия</h2>
+		<div class="shop">
+			<article class="product">
+				<picture class="product__imgbox">
+					<source
+					media="(min-width:360px)"
+					srcset="images/shop-item-mobile1.jpg"
+					media="(min-width:768px)"
+					srcset="images/shop-item-tablet1.jpg"
+					media="(min-width:1200px)"
+					srcset="images/shop-item-desk1.jpg">
+					<img class="product__img" src="images/shop-item-desk1.jpg" alt="подушка-с-принтом">
+				</picture>
+				<div class="product__body">
+					<div class="product__content">
+						<h3 class="product__title">подушки на диван</h3>
+						<p class="product__description"> Набор из двух подушек с модными принтами. Видео о создании<a href="" class="product-link"> здесь</a>.</p>
+						<div class="product__box">
+							<div class="price">
+								<span class="product__price_old">
+									<span class="product__price-value">1000</span>
+									<span class="product__rub">₽</span>
+								</span>
+								<span class="product__price">
+									<span class="product__price-value">800</span>
+									<span class="product__rub">₽</span>
+								</span>
+							</div>
+							<button class="product__button" type="button"> в магазин </button>
 						</div>
-						<button class="product__button" type="button"> в магазин </button>
 					</div>
 				</div>
-			</div>
-		</article>
+			</article>
 
-		<article class="product">
-			<pictur class="product__imgbox">
-				<source
-				media="(min-width:360px)"
-				srcset="images/shop-item-mobile2.jpg"
-				media="(min-width:768px)"
-				srcset="images/shop-item-tablet2.jpg"
-				media="(min-width:1200px)"
-				srcset="images/shop-item-desk2.jpg">
-				<img class="product__img" src="images/shop-item-desk2.jpg" alt="кукла-зайчик">
-			</picture>
-			<div class="product__body">
-				<div class="product__content">
-					<h3 class="product__title">кукла "зайчик"</h3>
-					<p class="product__description">Интерьерная рукодельная кукла "Зайчик", созданию которой посвещена<a href="" class="product-link"> весенняя серия постов </a> в блоге и несколько подскатов.</p>
-					<div class="product__box">
-						<div class="price">
-							<span class="product__price">
-								<span class="product__price-value">3500</span>
-								<span class="product__rub">₽</span>
-							</span>
+			<article class="product">
+				<picture class="product__imgbox">
+					<source
+					media="(min-width:360px)"
+					srcset="images/shop-item-mobile2.jpg"
+					media="(min-width:768px)"
+					srcset="images/shop-item-tablet2.jpg"
+					media="(min-width:1200px)"
+					srcset="images/shop-item-desk2.jpg">
+					<img class="product__img" src="images/shop-item-desk2.jpg" alt="кукла-зайчик">
+				</picture>
+				<div class="product__body">
+					<div class="product__content">
+						<h3 class="product__title">кукла "зайчик"</h3>
+						<p class="product__description">Интерьерная рукодельная кукла "Зайчик", созданию которой посвещена<a href="" class="product-link"> весенняя серия постов </a> в блоге и несколько подскатов.</p>
+						<div class="product__box">
+							<div class="price">
+								<span class="product__price">
+									<span class="product__price-value">3500</span>
+									<span class="product__rub">₽</span>
+								</span>
+							</div>
+							<button class="product__button" type="button"> в магазин </button>
 						</div>
-						<button class="product__button" type="button"> в магазин </button>
 					</div>
 				</div>
-			</div>
-		</article>
+			</article>
 
-		<article class="product">
-			<pictur class="product__imgbox">
-				<source
-				media="(min-width:360px)"
-				srcset="images/shop-item-mobile3.jpg"
-				media="(min-width:768px)"
-				srcset="images/shop-item-tablet3.jpg"
-				media="(min-width:1200px)"
-				srcset="images/shop-item-desk3.jpg">
-				<img class="product__img" src="images/shop-item-desk3.jpg" alt="зеркало-в-рамке">
-			</picture>
-			<div class="product__body">
-				<div class="product__content">
-					<h3 class="product__title">шестиугольная рамка</h3>
-					<p class="product__description"> Необычная рамка для украшения дома из видео <a href="" class="product-link">"Как сделать рамку из подручных средств за 30 минут"</a></p>
-					<div class="product__box">
-						<div class="price">
-							<span class="product__price_old">
-								<span class="product__price-value">500</span>
-								<span class="product__rub">₽</span>
-							</span>
-							<span class="product__price">
-								<span class="product__price-value">400</span>
-								<span class="product__rub">₽</span>
-							</span>
+			<article class="product">
+				<picture class="product__imgbox">
+					<source
+					media="(min-width:360px)"
+					srcset="images/shop-item-mobile3.jpg"
+					media="(min-width:768px)"
+					srcset="images/shop-item-tablet3.jpg"
+					media="(min-width:1200px)"
+					srcset="images/shop-item-desk3.jpg">
+					<img class="product__img" src="images/shop-item-desk3.jpg" alt="зеркало-в-рамке">
+				</picture>
+				<div class="product__body">
+					<div class="product__content">
+						<h3 class="product__title">шестиугольная рамка</h3>
+						<p class="product__description"> Необычная рамка для украшения дома из видео <a href="" class="product-link">"Как сделать рамку из подручных средств за 30 минут"</a></p>
+						<div class="product__box">
+							<div class="price">
+								<span class="product__price_old">
+									<span class="product__price-value">500</span>
+									<span class="product__rub">₽</span>
+								</span>
+								<span class="product__price">
+									<span class="product__price-value">400</span>
+									<span class="product__rub">₽</span>
+								</span>
+							</div>
+							<button class="product__button" type="button"> в магазин </button>
 						</div>
-						<button class="product__button" type="button"> в магазин </button>
 					</div>
 				</div>
-			</div>
-		</article>
+			</article>
+		</div>
 	</section>
+
 
 	<footer class="footer">
 		<div class="footer-wrapper">
