@@ -64,7 +64,7 @@
 				<a class="logo-link" href="">
 					<img src="svg/noemi-logo.svg" class="header-logo" alt="logo" width="180"> 
 				</a>
-				<nav class="menu">
+				<nav class="menu-list-desktop">
 					<ul class="menu-list">
 						<li class="menu-list-item"><a class="menu-link" href="">Главная</a></li>
 						<li class="menu-list-item"><a class="menu-link" href="">Посты</a></li>
@@ -74,6 +74,12 @@
 						<li class="menu-list-item"><a class="menu-link" href="">Контакты</a></li>
 					</ul>
 				</nav>
+
+				<div class="lines">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
 			</div>
 
 			<h1 class="welcome-title">Блог о творчестве, спорте, и образе жизни</h1>
@@ -143,7 +149,7 @@
 			<main class="main">
 				<article class="news">
 					<a class="news-img" href="#0">
-						<img class="news-img" src="images/last-post1.jpg" alt=“Прогулка-по-пляжу” width="380">
+						<img class="news-img" src="images/last-post1.jpg" alt=“Прогулка-по-пляжу” width="100%">
 					</a>
 
 					<div class="news-text">
@@ -173,7 +179,7 @@
 
 				<article class="news">
 					<a class="news-img" href="#0">
-						<img class="news-img" src="images/last-post2.jpg" alt=“Девушка-занимется-йогой” width="380">
+						<img class="news-img" src="images/last-post2.jpg" alt=“Девушка-занимется-йогой” width="100%">
 					</a>
 
 					<div class="news-text">
@@ -203,7 +209,7 @@
 
 				<article class="news">
 					<a class="news-img" href="#0">
-						<img class="news-img" src="images/last-post3.jpg" alt=“Девушка-танцует-на-фестивале” width="380">
+						<img class="news-img" src="images/last-post3.jpg" alt=“Девушка-танцует-на-фестивале” width="100%">
 					</a>
 
 					<div class="news-text">
@@ -231,7 +237,7 @@
 
 				<article class="news">
 					<a class="news-img" href="#0">
-						<img class="news-img" src="images/last-post4.jpg" alt=“Накрытый-стол” width="380">
+						<img class="news-img" src="images/last-post4.jpg" alt=“Накрытый-стол” width="100%">
 					</a>
 
 					<div class="news-text">
@@ -261,7 +267,7 @@
 
 				<article class="news">
 					<a class="news-img" href="#0">
-						<img class="news-img" src="images/last-post5.jpg" alt=“Подушка-с-принтом” width="380">
+						<img class="news-img" src="images/last-post5.jpg" alt=“Подушка-с-принтом” width="100%">
 					</a>
 
 					<div class="news-text">
@@ -423,9 +429,9 @@
 			<article class="product">
 				<picture class="product__imgbox">
 					<source
-					media="(min-width:360px)"
+					media="(max-width:640px)" width="100%"
 					srcset="images/shop-item-mobile1.jpg"
-					media="(min-width:768px)"
+					media="(min-width:641px) and (max-width:1199px)" width="100%"
 					srcset="images/shop-item-tablet1.jpg"
 					media="(min-width:1200px)"
 					srcset="images/shop-item-desk1.jpg">
@@ -455,9 +461,9 @@
 			<article class="product">
 				<picture class="product__imgbox">
 					<source
-					media="(min-width:360px)"
+					media="(max-width:640px)" width="100%"
 					srcset="images/shop-item-mobile2.jpg"
-					media="(min-width:768px)"
+					media="(min-width:641px) and (max-width:1199px)" width="100%"
 					srcset="images/shop-item-tablet2.jpg"
 					media="(min-width:1200px)"
 					srcset="images/shop-item-desk2.jpg">
@@ -483,10 +489,10 @@
 			<article class="product">
 				<picture class="product__imgbox">
 					<source
-					media="(min-width:360px)"
-					srcset="images/shop-item-mobile3.jpg"
-					media="(min-width:768px)"
-					srcset="images/shop-item-tablet3.jpg"
+					media="(max-width:640px)"
+					srcset="images/shop-item-mobile3.jpg" width="100%"
+					media="(min-width:641px) and (max-width:1199px)"
+					srcset="images/shop-item-tablet3.jpg" width="100%"
 					media="(min-width:1200px)"
 					srcset="images/shop-item-desk3.jpg">
 					<img class="product__img" src="images/shop-item-desk3.jpg" alt="зеркало-в-рамке">
